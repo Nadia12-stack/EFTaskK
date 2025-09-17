@@ -24,13 +24,13 @@ namespace StudentSystem.Management
                 string? desc = Console.ReadLine();
 
                 Console.Write("Start date (yyyy-MM-dd): ");
-                DateTime.TryParse(Console.ReadLine(), out var start);
+                DateTime start = Convert.ToDateTime(Console.ReadLine());
 
                 Console.Write("End date (yyyy-MM-dd): ");
-                DateTime.TryParse(Console.ReadLine(), out var end);
+                DateTime end = Convert.ToDateTime(Console.ReadLine());
 
                 Console.Write("Price: ");
-                Decimal.TryParse(Console.ReadLine(), out var price);
+                decimal price = Convert.ToDecimal(Console.ReadLine());
 
                 var course = new Course
                 {
