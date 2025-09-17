@@ -22,7 +22,8 @@ namespace StudentSystem.Management
                 string? phone = Console.ReadLine();
 
                 Console.Write("Registered on (year-Mounth-day): ");
-                DateTime? registeredOn = DateTime.TryParse(Console.ReadLine(), out var regOn) ? regOn : null;
+                 DateTime? registeredOn = string.IsNullOrWhiteSpace(Console.ReadLine())
+                 ? (DateTime?)null : Convert.ToDateTime(Console.ReadLine());
 
                 Console.Write("Birthday (year-Mounth-day): ");
                 DateOnly birthday = DateOnly.MinValue;
